@@ -1,0 +1,11 @@
+.nav-menu {
+  padding: 10px !important; /* Como el tutorial */
+  min-height: 60px; /* Asegura espacio suficiente para centrado vertical */
+}
+
+.nav-li {
+  margin: 0 15px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}

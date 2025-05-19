@@ -1,70 +1,36 @@
-# GitHub Codespaces ♥️ React
+# Americas Countries Explorer
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+## Descripción
+Americas Countries Explorer es una aplicación web interactiva que permite explorar información detallada sobre los países de las Américas (América del Norte, Central y del Sur). Los usuarios pueden seleccionar una región, ver una lista de países con sus banderas, y acceder a detalles como capital, población, idiomas, moneda, fronteras, y un mapa interactivo de cada país. La aplicación está diseñada con un enfoque en Responsive Web Design, asegurando una experiencia fluida en dispositivos móviles y de escritorio.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+## Características
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+- Navegación por regiones: Selecciona entre América del Norte, Central o del Sur para ver los países correspondientes.
+- Lista de países: Muestra tarjetas con el nombre, bandera, capital e idioma principal de cada país.
+- Detalles del país: Al hacer clic en "Ver más", se muestran:
+    - Bandera y escudo oficial.
+    - Capital, población, idiomas (todos los disponibles), moneda y fronteras (códigos alpha-3).
+    - Mapa interactivo centrado en el país, usando OpenStreetMap.
 
-This project was bootstrapped for you with [Vite](https://vitejs.dev/).
+- Carga dinámica: Indicadores de carga para datos ("Cargando detalles del país...") y mapas ("Cargando Mapa...").
+- Imágenes rotativas: Muestra imágenes aleatorias (montaña, Panamá, río) en la vista de lista, ocultas en la vista de detalles.
+- Botón "Home": Permite volver a la lista de países desde la vista de detalles.
+Diseño responsivo: Adaptado para móviles, tabletas y escritorios con Bootstrap.
 
-## Available Scripts
+Tecnologías
+- React: Biblioteca de JavaScript para la interfaz de usuario.
+- Bootstrap 5.3.6: Framework CSS para diseño responsivo y componentes estilizados.
+- REST Countries API: Fuente de datos para información de países (https://restcountries.com/v3.1).
+- OpenStreetMap: Proveedor de mapas interactivos embebidos.
+- JavaScript (ES6+): Lógica de la aplicación.
+CSS personalizado: Estilos adicionales para la navegación y tarjetas.
 
-In the project directory, you can run:
+## APIs Utilizadas
+- REST Countries API:
+    - Lista de países: https://restcountries.com/v3.1/subregion/${region}
+    - Detalles del país: https://restcountries.com/v3.1/alpha/${code}
+    - Proporciona datos como nombres, banderas, escudos, capitales, población, idiomas, monedas, fronteras y coordenadas.
 
-### `npm start`
-
-We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
-
-Runs the app in the development mode.\
-Open [http://localhost:3000/](http://localhost:3000/) in the built-in Simple Browser (`Cmd/Ctrl + Shift + P > Simple Browser: Show`) to view your running application.
-
-The page will reload automatically when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Vite documentation](https://vitejs.dev/guide/).
-
-To learn Vitest, a Vite-native testing framework, go to [Vitest documentation](https://vitest.dev/guide/)
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://sambitsahoo.com/blog/vite-code-splitting-that-works.html](https://sambitsahoo.com/blog/vite-code-splitting-that-works.html)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer#rollup-plugin-visualizer)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf](https://dev.to/hamdankhan364/simplifying-progressive-web-app-pwa-development-with-vite-a-beginners-guide-38cf)
-
-### Advanced Configuration
-
-This section has moved here: [https://vitejs.dev/guide/build.html#advanced-base-options](https://vitejs.dev/guide/build.html#advanced-base-options)
-
-### Deployment
-
-This section has moved here: [https://vitejs.dev/guide/build.html](https://vitejs.dev/guide/build.html)
-
-### Troubleshooting
-
-This section has moved here: [https://vitejs.dev/guide/troubleshooting.html](https://vitejs.dev/guide/troubleshooting.html)
+- OpenStreetMap:
+    - Mapas embebidos: https://www.openstreetmap.org/export/embed.html?bbox=...
+    - Muestra mapas centrados en las coordenadas del país (latlng).
